@@ -1,0 +1,33 @@
+:root {
+  --primary-color: #3f2323;
+}
+
+.btn {
+  display: block;
+  width: fit-content;
+  font-size: 12px;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+}
+
+.login-container {
+  margin: 8rem 0;
+  padding: 2rem 4rem;
+  background: rgb(0, 0, 0);
+  border-radius: 16px;
+  color: white;
+}
+
+.login-container input {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  font-size: 12px;
+  outline: none;
+  width: 100%;
+  border: 0;
+  margin: 1rem 0;
+  border-radius: 12px;
+}
