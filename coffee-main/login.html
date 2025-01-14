@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bean Boutique - Sign In</title>
+    <link rel="stylesheet" href="coffee.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">Bean Boutique</div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="coffee-selection.html">Coffee Selection</a></li>
+          <li><a href="brewing-equipment.html">Brewing Equipment</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="special-offers.html">Special Offers</a></li>
+          <li><a href="login.html" class="active">Sign In</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="login-container">
+      <h1>Sign In</h1>
+      <form action="/login" method="post">
+        <label for="email">Email Address:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your password"
+          required
+        />
+
+        <button class="btn" type="submit">Sign In</button>
+
+        <p>Don't have an account? <a href="register.html">Register here</a></p>
+      </form>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Bean Boutique. All rights reserved.</p>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
