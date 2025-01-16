@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bean Boutique - Sign In</title>
+    <title>Bean Boutique - Home</title>
     <link rel="stylesheet" href="coffee.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -21,34 +21,17 @@
         </ul>
       </nav>
     </header>
-
-    <div class="login-container">
-      <h1>Sign In</h1>
-      <form action="/login" method="post">
-        <label for="email">Email Address:</label>
+    <main>
+      <div id="selection-header">
         <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Enter your email"
-          required
+          id="search-input"
+          type="text"
+          oninput="handleSearch()"
+          placeholder="Search"
         />
-
-        <label for="password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Enter your password"
-          required
-        />
-
-        <button class="btn" type="submit">Sign In</button>
-
-        <p>Don't have an account? <a href="register.html">Register here</a></p>
-      </form>
-    </div>
-
+      </div>
+      <section id="selection-items"></section>
+    </main>
     <footer>
       <p>&copy; 2024 Bean Boutique. All rights reserved.</p>
       <ul>
@@ -57,5 +40,6 @@
         <li><a href="#">Instagram</a></li>
       </ul>
     </footer>
+    <script src="app.js"></script>
   </body>
 </html>
