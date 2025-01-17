@@ -1,5 +1,6 @@
 :root {
   --primary-color: #3f2323;
+  --bg: rgba(200, 200, 200, 0.4);
 }
 
 .btn {
@@ -16,7 +17,7 @@
 .login-container {
   margin: 8rem 0;
   padding: 2rem 4rem;
-  background: rgb(0, 0, 0);
+  background: rgb(74, 8, 12);
   border-radius: 16px;
   color: white;
 }
