@@ -36,7 +36,7 @@ header {
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 15px;
+  gap: 10px;
 }
 
 .navbar a {
@@ -44,10 +44,13 @@ header {
   color: #fff;
   font-size: 1em;
   transition: color 0.3s;
+  padding: 0.5rem 1rem;
+  transition: 0.3s ease-in-out;
+  border-radius: 12px;
 }
 
 .navbar a:hover {
-  color: #fb043a38;
+  background-color: var(--bg);
 }
 
 /* Hero Section */

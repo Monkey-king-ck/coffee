@@ -68,9 +68,9 @@ function display(coffees) {
       .join("-")
       .toLowerCase()}.jpeg" alt="coffee" /><div><h3>${coffee.name}</h3><span>$${
       coffee.price
-    }</span><button onclick="addToCart('${
-      coffee.id
-    }')">Add to Cart</button></div>`
+    }</span><button onclick="addToCart('${coffee.id}', '${coffee.name}', ${
+      coffee.price
+    })">Add to Cart</button></div>`
     container.appendChild(item)
   })
 }

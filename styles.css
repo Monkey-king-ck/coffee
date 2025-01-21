@@ -1,5 +1,6 @@
 :root {
   --primary-color: #3f2323;
+  --secondary-color: #222;
   --bg: rgba(200, 200, 200, 0.4);
 }
 
@@ -31,4 +32,33 @@
   border: 0;
   margin: 1rem 0;
   border-radius: 12px;
+}
+
+/* navbar styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown:hover ul {
+  display: flex;
+}
+
+.dropdown ul {
+  display: none;
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  gap: 0.2rem;
+  background: var(--secondary-color);
+  padding: 0.5rem;
+  border-radius: 8px;
+  width: 180px;
+}
+
+.dropdown ul a {
+  padding: 2px;
+  border-radius: 0;
 }
