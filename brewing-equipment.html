@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bean Boutique - Equipments</title>
+    <link rel="stylesheet" href="coffee.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">Bean Boutique</div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Products</a>
+            <ul>
+              <li><a href="coffee-selection.html">Coffee</a></li>
+              <li><a href="brewing-equipment.html">Brewing Equipments</a></li>
+            </ul>
+          </li>
+
+          <li><a href="events.html">Events</a></li>
+          <li><a href="special-offers.html">Offers</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div id="selection-header">
+        <input
+          id="search-input"
+          type="text"
+          oninput="handleSearch()"
+          placeholder="Search"
+        />
+      </div>
+      <section id="selection-items"></section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Bean Boutique. All rights reserved.</p>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -41,8 +41,53 @@ const coffees = [
   },
 ]
 
+const equipments = [
+  {
+    id: 1,
+    name: "Americano",
+    price: 10,
+  },
+  {
+    id: 2,
+    name: "Black Coffee",
+    price: 5,
+  },
+  {
+    id: 3,
+    name: "Cappuccino",
+    price: 7,
+  },
+  {
+    id: 4,
+    name: "Espresso",
+    price: 3,
+  },
+  {
+    id: 5,
+    name: "Flat White",
+    price: 9,
+  },
+  {
+    id: 6,
+    name: "Latte",
+    price: 6,
+  },
+  {
+    id: 7,
+    name: "Macchiato",
+    price: 5,
+  },
+  {
+    id: 8,
+    name: "Mocha",
+    price: 12,
+  },
+]
+
 if (window.location.pathname === "/coffee-selection.html") {
   display(coffees)
+} else if (window.location.pathname === "/brewing-equipment.html") {
+  display(equipments)
 }
 
 function handleSearch() {
@@ -51,10 +96,17 @@ function handleSearch() {
     .value.toLowerCase()
     .split(" ")
     .join("")
-  const searchedCoffees = coffees.filter((coffee) =>
-    coffee.name.toLowerCase().split(" ").join("").includes(query)
-  )
-  display(searchedCoffees)
+  if (window.location.pathname === "/coffee-selection.html") {
+    const searchedCoffees = coffees.filter((coffee) =>
+      coffee.name.toLowerCase().split(" ").join("").includes(query)
+    )
+    display(searchedCoffees)
+  } else if (window.location.pathname === "/brewing-equipment.html") {
+    const searchedEquipments = equipments.filter((coffee) =>
+      coffee.name.toLowerCase().split(" ").join("").includes(query)
+    )
+    display(searchedEquipments)
+  }
 }
 
 function display(coffees) {
