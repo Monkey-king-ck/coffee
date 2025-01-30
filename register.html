@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bean Boutique - Sign In</title>
+    <title>Bean Boutique - Sign Up</title>
     <link rel="stylesheet" href="coffee.css" />
     <link rel="stylesheet" href="styles.css" />
     <script
@@ -40,8 +40,17 @@
     </header>
 
     <div class="login-container">
-      <h1>Sign In</h1>
-      <form onsubmit="login()">
+      <h1>Sign Up</h1>
+      <form onsubmit="register(event)">
+        <label for="name">Full Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required
+        />
+
         <label for="email">Email Address:</label>
         <input
           type="email"
@@ -56,13 +65,22 @@
           type="password"
           id="password"
           name="password"
-          placeholder="Enter your password"
+          placeholder="Enter a password"
           required
         />
 
-        <button class="btn" type="submit">Sign In</button>
+        <label for="confirm-password">Confirm Password:</label>
+        <input
+          type="password"
+          id="confirm-password"
+          name="confirm-password"
+          placeholder="Confirm your password"
+          required
+        />
 
-        <p>Don't have an account? <a href="register.html">Register here</a></p>
+        <button class="btn" type="submit">Sign Up</button>
+
+        <p>Already have an account? <a href="login.html">Sign in here</a></p>
       </form>
     </div>
 

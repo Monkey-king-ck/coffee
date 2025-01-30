@@ -13,12 +13,39 @@
   background: var(--primary-color);
   color: white;
   text-decoration: none;
+  border: 0;
+}
+
+.btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.cart-btn {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--primary-color);
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.cart-btn:hover {
+  box-shadow: 0px 0px 2px 2px var(--primary-color);
 }
 
 .login-container {
-  margin: 8rem 0;
+  margin: 8rem auto;
   padding: 2rem 4rem;
-  background: rgb(74, 8, 12);
+  background: #111;
+  max-width: 500px;
   border-radius: 16px;
   color: white;
 }
@@ -46,8 +73,8 @@
 .dropdown ul {
   display: none;
   position: absolute;
-  top: 1.8rem;
-  left: 0;
+  top: 1.6rem;
+  right: 0;
   flex-direction: column;
   margin: 0;
   padding: 0;
@@ -147,4 +174,37 @@ main {
 .offer-expiry {
   font-weight: bold;
   color: #6b4e3d;
+}
+
+.slideshow {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.slideshow img {
+  width: 300px;
+  border-radius: 12px;
+  opacity: 0;
+}
+
+.slideshow #slide1 {
+  animation: slideshow 6s 2s infinite;
+}
+
+.slideshow #slide2 {
+  animation: slideshow 6s 4s infinite;
+}
+
+.slideshow #slide3 {
+  animation: slideshow 6s 6s infinite;
+}
+
+@keyframes slideshow {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
 }

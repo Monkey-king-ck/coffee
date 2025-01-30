@@ -1,3 +1,24 @@
+const cartBtn = document.createElement("div")
+cartBtn.classList.add("cart-btn")
+cartBtn.innerHTML = '<i class="fa-solid fa-cart-shopping"></i>'
+cartBtn.onclick = openCart
+document.body.appendChild(cartBtn)
+
+const cartDiv = document.createElement("div")
+cartDiv.classList.add("cart-container")
+cartDiv.innerHTML = `
+<i class="fa-solid fa-xmark" onclick="closeCart()"></i>
+<ul>
+
+</ul>
+<p>Total: <span class="price-tag"></span></p>
+<div class="btns">
+  <button class="btn" onclick="clearCart()"><i class="fa-solid fa-trash-can"></i></button>
+  <button class="btn" onclick="checkOut()"><i class="fa-solid fa-dollar-sign"></i></button>
+</div>
+`
+document.body.appendChild(cartDiv)
+
 updateCart()
 
 function getCart() {
@@ -7,7 +28,7 @@ function getCart() {
 
 function addToCart(id, name, price) {
   const cart = getCart()
-  const newItem = { id, name, price }
+  const newItem = { id, name, price, quantity: 1 }
   if (!cart.includes(newItem)) {
     cart.push(newItem)
     localStorage.setItem("cart", JSON.stringify(cart))
@@ -24,9 +45,9 @@ function updateCart() {
     let price = 0
     for (let i = 0; i < cart.length; i++) {
       const li = document.createElement("li")
-      li.innerHTML = `<div class="name">${cart[i].name}</div><div class="price">$${cart[i].price}</div>`
+      li.innerHTML = `<div class="name">${cart[i].name}</div><div class="price">$${cart[i].price} x ${cart[i].quantity}</div>`
       cartUl.appendChild(li)
-      price += cart[i].price
+      price += cart[i].price * cart[i].quantity
     }
     priceTag.textContent = "$" + price
   } else {
@@ -44,7 +65,7 @@ function openCart() {
 
 function closeCart() {
   const cartDiv = document.querySelector(".cart-container")
-  cartDiv.style.transform = "translateX(450px)"
+  cartDiv.style.transform = "translateX(100%)"
 }
 
 function clearCart() {
